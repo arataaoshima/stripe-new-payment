@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
 
   def payment
-   Stripe.api_key = ENV['STRIPE_SECRET_KEY']
-   @stripe_secret_key = ENV['STRIPE_PUBLISH_KEY']
+    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+
+    @stripe_publish_key = ENV['STRIPE_PUBLISH_KEY']
+
     @session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{

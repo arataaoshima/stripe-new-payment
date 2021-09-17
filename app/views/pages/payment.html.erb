@@ -2,7 +2,8 @@
 <button id="checkout-button">決済する</button>
 
 <script>
-  var stripe = Stripe('<%= @stripe_secret_key %>');
+  var stripe = Stripe('<%= @stripe_publish_key %>');
+
   var checkoutButton = document.getElementById('checkout-button');
 
   checkoutButton.addEventListener('click', function() {
