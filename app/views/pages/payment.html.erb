@@ -1,0 +1,15 @@
+<script src="https://js.stripe.com/v3/"></script>
+<button id="checkout-button">決済する</button>
+
+<script>
+  var stripe = Stripe('<%= @stripe_secret_key %>');
+  var checkoutButton = document.getElementById('checkout-button');
+
+  checkoutButton.addEventListener('click', function() {
+    stripe.redirectToCheckout({
+      sessionId: '<%= @session.id %>'
+    }).then(function (result) {
+
+    });
+  });
+</script>
