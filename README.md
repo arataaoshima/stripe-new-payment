@@ -17,3 +17,6 @@ rails g controller Pages payment success
 
 参考
 https://qiita.com/lumbermill/items/a05f8e9bf2160b0b84f1
+
+Herokuデプロイ後
+https://stripe-new-payment.herokuapp.com/
